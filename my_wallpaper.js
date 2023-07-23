@@ -4,9 +4,9 @@ let rect_height = 20;
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
@@ -19,9 +19,16 @@ function wallpaper_background() {
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+  
+  //Draws a flower thing
   drawOuterPetals();
   drawMiddlePetals();
   drawInnerPetals();
+
+  //Draws a clover
+  //drawClover();
+
+
 }
 
 
@@ -67,11 +74,6 @@ function drawMiddlePetals(){
   rect(upCentreX - 40, upCentreY + 25, mPetalWidth + 10, mPetalHeight, 30, 1, 1, 30); //sixth middle petal (left)
   rect(upCentreX - 35, upCentreY + 2, mPetalWidth, mPetalHeight, 1, 20, 1, 30); //seventh middle petal (top left)
   rect(upCentreX - 15, upCentreY, mPetalWidth, mPetalHeight, 30, 30, 1, 1); //last petal (top)
-
-
-
-  
-
 }
 
 function drawOuterPetals(){
@@ -101,5 +103,23 @@ function drawOuterPetals(){
   rect(outCentreX, outCentreY + 85, oPetalW, oPetalH, 30, 30, 30, 30); //bottom petal
   rect(outCentreX + 28, outCentreY + 82, oPetalW, oPetalH, 1, 30, 1, 30); //br petal
 }
+
+function drawClover(){
+  fill(153, 237, 114);
+  strokeWeight(0.01);
+  rect(120, 50, 50, 50, 30, 15, 30, 1); //top right petal
+  rect(70, 50, 50, 50, 15, 30, 1, 30); //top left petal
+  rect(120, 100, 50, 50, 1, 30, 15, 30); //bottom right petal
+  rect(70, 100, 50, 50, 30, 1, 15, 30); //bottom left petal
+
+
+
+
+}
+
+
+
+
+
 
 
