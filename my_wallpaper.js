@@ -4,9 +4,9 @@ let rect_height = 20;
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+  pWallpaper.show_guide(true); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
@@ -105,14 +105,35 @@ function drawOuterPetals(){
 }
 
 function drawClover(){
+  stroke(65, 130, 67);
+  strokeWeight(5.5);
+  strokeCap(PROJECT);
+  curve(10, 100, 100, 180, 135, 80, 180, 180); //stem
+
+  stroke(96, 204, 116);
+  strokeWeight(3.5);
+  curve(10, 100, 100, 180, 135, 80, 180, 180); //stem outline
+
   fill(153, 237, 114);
   strokeWeight(0.01);
   rect(120, 50, 50, 50, 30, 15, 30, 1); //top right petal
   rect(70, 50, 50, 50, 15, 30, 1, 30); //top left petal
   rect(120, 100, 50, 50, 1, 30, 15, 30); //bottom right petal
-  rect(70, 100, 50, 50, 30, 1, 15, 30); //bottom left petal
+  rect(70, 100, 50, 50, 30, 1, 30, 15); //bottom left petal
 
+  noFill();
+  stroke(65, 130, 67);
+  strokeWeight(0.6);
+  rect(120, 50, 50, 50, 30, 15, 30, 1); 
+  rect(70, 50, 50, 50, 15, 30, 1, 30);
+  rect(120, 100, 50, 50, 1, 30, 15, 30);
+  rect(70, 100, 50, 50, 30, 1, 30, 15); //outlines for all the petals
 
+  noFill();
+  noSmooth();
+  stroke(224, 255, 230);
+  strokeWeight(1.5);
+  bezier(140, 100, 175, 75, 130, 50, 120, 85);
 
 
 }
