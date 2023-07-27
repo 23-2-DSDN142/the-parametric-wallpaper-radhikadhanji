@@ -34,12 +34,12 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 function drawInnerPetals(){
 
-  let centreX = 100; 
+  let centreX = 100; //this was 100
   let centreY = 50;
-  let petalWidth = 35; //this was 25
-  let topPetalHeight = 40; //this was 30
+  let petalWidth = 25; //this was 25
+  let topPetalHeight = 30; //this was 30
   let bottomPetalHeight = topPetalHeight + 45;
-  let lightPink = color(250, 197, 220);
+  let lightPink = color(149, 237, 224); //this was 250, 197, 220
   let innerOutline = color(245, 140, 204);
 
   //Draws inner petals
@@ -54,14 +54,14 @@ function drawInnerPetals(){
 }
 
 function drawMiddlePetals(){
-  let middlePink = color(232, 97, 158);
+  let middlePink = color(89, 131, 222); //this was 232, 97, 158
   let middleOutline = color(189, 66, 121);
 
   //Draws middle petals
-  let upCentreX = 100;
+  let upCentreX = 100; //this was 100
   let upCentreY = 30;
-  let mPetalWidth = 40; //this was 30
-  let mPetalHeight = 40; //this was 30
+  let mPetalWidth = 30; //this was 30
+  let mPetalHeight = 30; //this was 30
   fill(middlePink);
   stroke(middleOutline);
   strokeWeight(1.5);
@@ -77,12 +77,12 @@ function drawMiddlePetals(){
 }
 
 function drawOuterPetals(){
-  let outerPink = color(219, 59, 107);
+  let outerPink = color(48, 45, 196); //this was 219, 59, 107
   let outerOutline = color(166, 30, 71);
-  let outCentreX = 80; //this was 86
+  let outCentreX = 86; //this was 86
   let outCentreY = 15;
-  let oPetalW = 40; //this was 30 
-  let oPetalH = 40; //this was 30
+  let oPetalW = 30; //this was 30 
+  let oPetalH = 30; //this was 30
 
 
   //Draws outer petals
