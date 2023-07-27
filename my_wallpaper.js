@@ -6,7 +6,7 @@ let rect_height = 20;
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
@@ -34,10 +34,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 function drawInnerPetals(){
 
-  let centreX = 100;
+  let centreX = 100; 
   let centreY = 50;
-  let petalWidth = 25;
-  let topPetalHeight = 30;
+  let petalWidth = 35; //this was 25
+  let topPetalHeight = 40; //this was 30
   let bottomPetalHeight = topPetalHeight + 45;
   let lightPink = color(250, 197, 220);
   let innerOutline = color(245, 140, 204);
@@ -60,8 +60,8 @@ function drawMiddlePetals(){
   //Draws middle petals
   let upCentreX = 100;
   let upCentreY = 30;
-  let mPetalWidth = 30;
-  let mPetalHeight = 30;
+  let mPetalWidth = 40; //this was 30
+  let mPetalHeight = 40; //this was 30
   fill(middlePink);
   stroke(middleOutline);
   strokeWeight(1.5);
@@ -79,10 +79,10 @@ function drawMiddlePetals(){
 function drawOuterPetals(){
   let outerPink = color(219, 59, 107);
   let outerOutline = color(166, 30, 71);
-  let outCentreX = 86;
+  let outCentreX = 80; //this was 86
   let outCentreY = 15;
-  let oPetalW = 30;
-  let oPetalH = 30;
+  let oPetalW = 40; //this was 30 
+  let oPetalH = 40; //this was 30
 
 
   //Draws outer petals
@@ -94,10 +94,10 @@ function drawOuterPetals(){
   rect(outCentreX - 30, outCentreY + 2, oPetalW, oPetalH, 1, 30, 1, 30); //tl petal
   rect(outCentreX + 30, outCentreY + 2, oPetalW, oPetalH, 30, 1, 30, 1); //tr petal
 
-  rect(outCentreX + 36, outCentreY + 28, oPetalW, oPetalH, 1, 30, 30, 1); //up right petal
-  rect(outCentreX - 36, outCentreY + 28, oPetalW, oPetalH, 30, 30, 30, 30); //up left petal
-  rect(outCentreX + 36, outCentreY + 57, oPetalW, oPetalH, 1, 30, 30, 1); //middle right petal
-  rect(outCentreX - 36, outCentreY + 57, oPetalW, oPetalH, 30, 30, 30, 30); //up left petal
+  rect(outCentreX + 40, outCentreY + 28, oPetalW, oPetalH, 1, 30, 30, 1); //up right petal
+  rect(outCentreX - 40, outCentreY + 28, oPetalW, oPetalH, 30, 30, 30, 30); //up left petal
+  rect(outCentreX + 40, outCentreY + 57, oPetalW, oPetalH, 1, 30, 30, 1); //middle right petal
+  rect(outCentreX - 40, outCentreY + 57, oPetalW, oPetalH, 30, 30, 30, 30); //up left petal
 
   rect(outCentreX - 30, outCentreY + 82, oPetalW, oPetalH, 30, 1, 30, 1); //bl petal
   rect(outCentreX, outCentreY + 85, oPetalW, oPetalH, 30, 30, 30, 30); //bottom petal
