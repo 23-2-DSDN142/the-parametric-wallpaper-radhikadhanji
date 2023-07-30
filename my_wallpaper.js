@@ -5,14 +5,14 @@ let rect_height = 20;
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
   pWallpaper.grid_settings.cell_height = 200;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.row_offset  = 100;
 }
 
 function wallpaper_background() {
@@ -107,13 +107,14 @@ function drawOuterPetals(){
 }
 
 function drawRandomFlowers(){
+  //stuff to fix, meant to draw 10 flowers at random places
 
-  for(let i = 50; i < 116; i++){
-    let r = random(46, 116);
-    let j = random(15, 100);
-  }
-  for(let i = 0; i < 10; i++){
-    drawFlowers(r, j);
+  for(let i = 0; i < 7; i++){
+    let r = random(60, 120);
+    let j = random(20, 110);
+    for(let i = 0; i < 10; i++){
+      drawFlowers(r, j);
+    }
   }
 }
 
