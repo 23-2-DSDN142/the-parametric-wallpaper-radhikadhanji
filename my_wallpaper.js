@@ -21,9 +21,11 @@ function wallpaper_background() {
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
   
   //Draws a flower thing
+
   drawOuterPetals();
   drawMiddlePetals();
   drawInnerPetals();
+  drawFlowers();
 
   //Draws a clover
   //drawClover();
@@ -39,8 +41,8 @@ function drawInnerPetals(){
   let petalWidth = 25; //this was 25
   let topPetalHeight = 30; //this was 30
   let bottomPetalHeight = topPetalHeight + 45;
-  let lightPink = color(149, 237, 224); //this was 250, 197, 220
-  let innerOutline = color(245, 140, 204);
+  let lightPink = color(154, 252, 157); //this was 250, 197, 220
+  let innerOutline = color(110, 219, 130);
 
   //Draws inner petals
   fill(lightPink);
@@ -54,8 +56,8 @@ function drawInnerPetals(){
 }
 
 function drawMiddlePetals(){
-  let middlePink = color(89, 131, 222); //this was 232, 97, 158
-  let middleOutline = color(189, 66, 121);
+  let middlePink = color(97, 201, 116); //this was 232, 97, 158
+  let middleOutline = color(61, 168, 80);
 
   //Draws middle petals
   let upCentreX = 100; //this was 100
@@ -77,8 +79,8 @@ function drawMiddlePetals(){
 }
 
 function drawOuterPetals(){
-  let outerPink = color(48, 45, 196); //this was 219, 59, 107
-  let outerOutline = color(166, 30, 71);
+  let outerPink = color(50, 135, 66); //this was 219, 59, 107
+  let outerOutline = color(23, 110, 39);
   let outCentreX = 86; //this was 86
   let outCentreY = 15;
   let oPetalW = 30; //this was 30 
@@ -102,6 +104,66 @@ function drawOuterPetals(){
   rect(outCentreX - 30, outCentreY + 82, oPetalW, oPetalH, 30, 1, 30, 1); //bl petal
   rect(outCentreX, outCentreY + 85, oPetalW, oPetalH, 30, 30, 30, 30); //bottom petal
   rect(outCentreX + 28, outCentreY + 82, oPetalW, oPetalH, 1, 30, 1, 30); //br petal
+}
+
+function drawFlowers(){
+  let red = color(235, 119, 110);
+  let darkRed = color(189, 76, 66);
+  let darkestRed = color(115, 25, 17);
+
+  let flowerX = 90;
+  let flowerY = 40;
+
+  noStroke();
+  fill(red);
+  ellipse(flowerX, flowerY, 14, 13);
+
+  fill(darkRed);
+  ellipse(flowerX, flowerY, 11, 12);
+
+  fill(red);
+  ellipse(flowerX, flowerY, 8, 7);
+
+  fill(darkRed);
+  ellipse(flowerX, flowerY, 5, 6);
+
+  fill(darkestRed);
+  ellipse(flowerX, flowerY, 4, 3);
+
+
+  noStroke();
+  fill(red);
+  ellipse(flowerX + 35, flowerY - 15, 14, 13);
+
+  fill(darkRed);
+  ellipse(flowerX + 35, flowerY - 15, 11, 12);
+
+  fill(red);
+  ellipse(flowerX + 35, flowerY - 15, 8, 7);
+
+  fill(darkRed);
+  ellipse(flowerX + 35, flowerY - 15, 5, 6);
+
+  fill(darkestRed);
+  ellipse(flowerX + 35, flowerY - 15, 4, 3);
+
+
+  noStroke();
+  fill(red);
+  ellipse(flowerX - 30, flowerY + 45, 14, 13);
+
+  fill(darkRed);
+  ellipse(flowerX - 30, flowerY + 45, 11, 12);
+
+  fill(red);
+  ellipse(flowerX - 30, flowerY + 45, 8, 7);
+
+  fill(darkRed);
+  ellipse(flowerX - 30, flowerY + 45, 5, 6);
+
+  fill(darkestRed);
+  ellipse(flowerX - 30, flowerY + 45, 4, 3);
+
 }
 
 function drawClover(){
