@@ -25,7 +25,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   drawOuterPetals();
   drawMiddlePetals();
   drawInnerPetals();
-  drawFlowers();
+  drawRandomFlowers();
 
   //Draws a clover
   //drawClover();
@@ -106,14 +106,25 @@ function drawOuterPetals(){
   rect(outCentreX + 28, outCentreY + 82, oPetalW, oPetalH, 1, 30, 1, 30); //br petal
 }
 
+function drawRandomFlowers(){
 
-function drawFlowers(){
+  for(let i = 50; i < 116; i++){
+    let r = random(46, 116);
+    let j = random(15, 100);
+  }
+  for(let i = 0; i < 10; i++){
+    drawFlowers(r, j);
+  }
+}
+
+
+function drawFlowers(r, j){
   let red = color(235, 119, 110);
   let darkRed = color(189, 76, 66);
   let darkestRed = color(115, 25, 17);
 
-  let flowerY = 40;
-  let flowerX = 90;
+  let flowerY = j;
+  let flowerX = r;
 
   noStroke();
   fill(red);
@@ -130,8 +141,9 @@ function drawFlowers(){
 
   fill(darkestRed);
   ellipse(flowerX, flowerY, 4, 3);
-
 }
+
+
 
 function drawClover(){
   stroke(65, 130, 67);
