@@ -3,6 +3,7 @@ let rect_width  = 20;
 let rect_height = 20;
 
 
+
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.resolution(FIT_TO_SCREEN);
@@ -19,7 +20,6 @@ function wallpaper_background() {
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  
   //Draws a flower thing
 
   drawOuterPetals();
@@ -106,13 +106,14 @@ function drawOuterPetals(){
   rect(outCentreX + 28, outCentreY + 82, oPetalW, oPetalH, 1, 30, 1, 30); //br petal
 }
 
+
 function drawFlowers(){
   let red = color(235, 119, 110);
   let darkRed = color(189, 76, 66);
   let darkestRed = color(115, 25, 17);
 
-  let flowerX = 90;
   let flowerY = 40;
+  let flowerX = 90;
 
   noStroke();
   fill(red);
@@ -129,40 +130,6 @@ function drawFlowers(){
 
   fill(darkestRed);
   ellipse(flowerX, flowerY, 4, 3);
-
-
-  noStroke();
-  fill(red);
-  ellipse(flowerX + 35, flowerY - 15, 14, 13);
-
-  fill(darkRed);
-  ellipse(flowerX + 35, flowerY - 15, 11, 12);
-
-  fill(red);
-  ellipse(flowerX + 35, flowerY - 15, 8, 7);
-
-  fill(darkRed);
-  ellipse(flowerX + 35, flowerY - 15, 5, 6);
-
-  fill(darkestRed);
-  ellipse(flowerX + 35, flowerY - 15, 4, 3);
-
-
-  noStroke();
-  fill(red);
-  ellipse(flowerX - 30, flowerY + 45, 14, 13);
-
-  fill(darkRed);
-  ellipse(flowerX - 30, flowerY + 45, 11, 12);
-
-  fill(red);
-  ellipse(flowerX - 30, flowerY + 45, 8, 7);
-
-  fill(darkRed);
-  ellipse(flowerX - 30, flowerY + 45, 5, 6);
-
-  fill(darkestRed);
-  ellipse(flowerX - 30, flowerY + 45, 4, 3);
 
 }
 
