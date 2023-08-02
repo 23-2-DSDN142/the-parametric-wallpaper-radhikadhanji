@@ -2,33 +2,36 @@
 let rect_width  = 20;
 let rect_height = 20;
 
-
-
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+  pWallpaper.show_guide(true); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
   pWallpaper.grid_settings.cell_height = 200;
-  pWallpaper.grid_settings.row_offset  = 100;
+  pWallpaper.grid_settings.row_offset  = 75;
 }
 
 function wallpaper_background() {
-  background(240, 255, 240); //light honeydew green colour
+  background(23, 19, 10); //light honeydew green colour (originally 240, 255, 240) //very dark dark brown
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+   
   //Draws a flower thing
 
-  drawOuterPetals();
-  drawMiddlePetals();
-  drawInnerPetals();
-  drawRandomFlowers();
+  //drawOuterPetals();
+  //drawMiddlePetals();
+  //drawInnerPetals();
+  //drawRandomFlowers();
 
   //Draws a clover
   //drawClover();
+
+  drawFrame();
+
+
 
 
 }
@@ -110,8 +113,8 @@ function drawRandomFlowers(){
   //stuff to fix, meant to draw 10 flowers at random places
 
   for(let i = 0; i < 7; i++){
-    let r = random(60, 120);
-    let j = random(20, 110);
+    let r = random(60 + (i * 10), 120);
+    let j = random(20 + (i * 10), 110);
     for(let i = 0; i < 10; i++){
       drawFlowers(r, j);
     }
@@ -179,6 +182,43 @@ function drawClover(){
 
 
 }
+
+function drawFrame(){
+  let frameHeight = 150;
+  let frameWidth = 100;
+  let frameColour = color(77, 53, 50); 
+  let innerFrameColour = color(82, 80, 80);
+  let gold = color(168, 102, 47);
+
+  stroke(frameColour);
+  strokeWeight(8);
+  noFill();
+  ellipse(100, 100, frameWidth, frameHeight);
+
+  strokeWeight(3);
+  bezier(50, 77, 20, 130, 20, 75, 50, 130);
+  bezier(150, 120, 225, 100, 120, 70, 150, 75);
+
+
+  strokeWeight(1);
+  stroke(gold);
+  bezier(50, 77, 20, 130, 20, 75, 50, 130);
+
+  fill(innerFrameColour);
+  noStroke();
+  ellipse(100, 100, frameWidth - 5, frameHeight - 5);
+}
+
+function drawButterfly(){
+  let butterflyTotalHeight = 75;
+  let butterflyTotalWidth = 50;
+  let butterflyWingHeight = butterflyTotalHeight - 15;
+  let butterflyWingLength = butterflyTotalWidth/2;
+  let butterflyColour = color(199, 74, 224);
+
+
+}
+
 
 
 
