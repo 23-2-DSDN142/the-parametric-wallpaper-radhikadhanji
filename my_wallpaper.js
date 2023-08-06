@@ -28,7 +28,7 @@ let wingHeight = 20;
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
@@ -37,7 +37,12 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(23, 19, 10); //very dark dark brown
+  if(pinkMode == true){
+    background(85, 9, 102); //dark purple
+  }
+  else{
+    background(23, 19, 10); //very dark dark brown
+  }
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
@@ -53,7 +58,12 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   drawMiddlePetals(centreX + 50, centreY - 30, mPetalW, mPetalH); //draws middle petals of all the flowers
   drawInnerPetals(rightX, rightY, petalWidth, petalHeight); //right flower
 
-  drawButterfly(butterflyX, butterflyY, wingWidth, wingHeight); //draws the butterfly
+  if(pinkMode == true){
+    drawHeart(centreX, centreY);
+  }
+  else{
+    drawButterfly(butterflyX, butterflyY, wingWidth, wingHeight); //draws the butterfly
+  }
 
 }
 
@@ -61,12 +71,21 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 function drawInnerPetals(x, y, w, h){
 
   let bottomPetalY = y + 15;
+  let darkBlue = color(62, 70, 230);
+  let innerOutline1 = color(44, 51, 191);
   let lightPink = color(219, 83, 104); 
-  let innerOutline = color(166, 48, 66);
+  let innerOutline2 = color(166, 48, 66);
+
+  if(pinkMode == true){
+    fill(lightPink);
+    stroke(innerOutline2);
+  }
+  else{
+    fill(darkBlue);
+    stroke(innerOutline1);
+  }
 
   //Draws inner petals
-  fill(lightPink);
-  stroke(innerOutline);
   strokeWeight(0.5);
   rect(x, y, w, h, 20, 5, 30, 5); //first inner petal
   rect(x, bottomPetalY, w, h, 5, 30, 5, 20); //second inner petal
@@ -78,10 +97,19 @@ function drawInnerPetals(x, y, w, h){
 
 function drawMiddlePetals(x, y, w, h){
   let middlePink = color(245, 171, 203); 
-  let middleOutline = color(163, 72, 86);
+  let middleOutline2 = color(163, 72, 86);
+  let lightBlue = color(51, 207, 255);
+  let middleOutline1 = color(191, 40, 17);
 
-  fill(middlePink);
-  stroke(middleOutline);
+  if(pinkMode == true){
+    fill(middlePink)
+    stroke(middleOutline2);
+  }
+  else{
+    fill(lightBlue)
+    stroke(middleOutline1);
+  }
+
   strokeWeight(0.7);
 
   rect(x - 4, y + 15, w, h, 20, 1, 30, 1); //first middle petal (top right)
@@ -102,7 +130,15 @@ function drawFrame(x, y, w, h){
   let gold = color(168, 102, 47);
   let blue = color(95, 204, 237);
 
-  fill(innerFrameColour);
+  let pinkFrame = color(180, 149, 245);
+  let innerPinkFrame = color(140, 75, 201);
+
+  if(pinkMode == true){
+    fill(innerPinkFrame);
+  }
+  else{
+    fill(innerFrameColour);
+  }
   noStroke();
   ellipse(x, y, w - 5, h - 5); //fills inside of the frame
 
@@ -113,7 +149,12 @@ function drawFrame(x, y, w, h){
   strokeWeight(2);
   line(50, 80, 100, 20); //inner highlights
 
-  stroke(frameColour);
+  if(pinkMode == true){
+    stroke(pinkFrame);
+  }
+  else{
+    stroke(frameColour);
+  }
   strokeWeight(8);
   noFill();
   ellipse(x, y, w, h); //creates the frame
@@ -173,6 +214,34 @@ function drawButterfly(x, y, w, h){
   ellipse(x -5, y + 13, 9, 12);
   ellipse(x + 5, y + 25, 7, 9);
   ellipse(x - 5, y + 25, 7, 9);
+}
+
+function drawHeart(x, y){
+  let heartColour = color(255, 176, 194);
+  let heartOutline = color(255, 143, 169);
+  let heartHighlights = color(255, 237, 248);
+  
+  fill(heartColour);
+  stroke(heartOutline);
+  strokeWeight(2);
+  
+  beginShape();
+  vertex(100, 90);
+  vertex(90, 100);
+  vertex(100, 110);
+  vertex(110, 100);
+  endShape(); //bottom of the heart
+
+  noStroke();
+  ellipse(107, 92, 15, 20);
+  ellipse(93, 92, 15, 20); //sides of the heart
+
+  fill(heartHighlights);
+  ellipse(107, 88, 10, 7);
+  ellipse(110, 95, 2, 2); //highlights on the heart
+
+
+
 }
 
 
