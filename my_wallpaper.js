@@ -13,6 +13,7 @@ let leftY = 140;
 let rightX = 140;
 let rightY = 140;
 
+
 //frame variables
 let frameHeight = 150;
 let frameWidth = 100;
@@ -22,6 +23,7 @@ let butterflyX = 100;
 let butterflyY = 70;
 let wingWidth = 15;
 let wingHeight = 20;
+
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
