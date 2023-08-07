@@ -1,33 +1,33 @@
 //your parameter variables go here!
-let pinkMode = false;
+let pinkMode = false; //switches on and off to pink mode
 
 //petal variables
-let mPetalW  = 10;
-let mPetalH = 10;
-let centreX = 100;
-let centreY = 150;
-let petalWidth = 10;
-let petalHeight = 15;
-let leftX = 55;
-let leftY = 140;
-let rightX = 140;
-let rightY = 140;
+let mPetalW  = 10; //middle petal width 
+let mPetalH = 10; //middle petal height 
+let centreX = 100; //x pos of centre petals //100
+let centreY = 150; //y pos of centre petals 
+let petalWidth = 10; //inner petal width //10
+let petalHeight = 15; //inner petal height 
+let leftX = 55; //x pos of left petals //55
+let leftY = 140; //y pos of left petals //140
+let rightX = 140; //x pos of right petals //140
+let rightY = 140; //y pos of right petals //140
 
 
 //frame variables
-let frameHeight = 150;
-let frameWidth = 100;
+let frameHeight = 150; 
+let frameWidth = 100; //100
 
 //butterfly variables
-let butterflyX = 100;
-let butterflyY = 70;
-let wingWidth = 15;
-let wingHeight = 20;
+let butterflyX = 100; //100
+let butterflyY = 70; //70
+let wingWidth = 15; //15
+let wingHeight = 20; //20
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -59,7 +59,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   drawInnerPetals(rightX, rightY, petalWidth, petalHeight); //right flower
 
   if(pinkMode == true){
-    drawHeart(centreX, centreY);
+    drawHeart(centreX, centreY); //draws a heart
   }
   else{
     drawButterfly(butterflyX, butterflyY, wingWidth, wingHeight); //draws the butterfly
@@ -70,10 +70,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 function drawInnerPetals(x, y, w, h){
 
-  let bottomPetalY = y + 15;
-  let darkBlue = color(62, 70, 230);
+  let bottomPetalY = y + 15; //y pos of the bottom petals
+  let darkBlue = color(62, 70, 230); //colours for normal mode
   let innerOutline1 = color(44, 51, 191);
-  let lightPink = color(219, 83, 104); 
+  let lightPink = color(219, 83, 104); //colours for pink mode
   let innerOutline2 = color(166, 48, 66);
 
   if(pinkMode == true){
@@ -96,9 +96,9 @@ function drawInnerPetals(x, y, w, h){
 }
 
 function drawMiddlePetals(x, y, w, h){
-  let middlePink = color(245, 171, 203); 
+  let middlePink = color(245, 171, 203); //colours for pink mode
   let middleOutline2 = color(163, 72, 86);
-  let lightBlue = color(51, 207, 255);
+  let lightBlue = color(51, 207, 255); //colours for normal mode
   let middleOutline1 = color(191, 40, 17);
 
   if(pinkMode == true){
@@ -127,12 +127,12 @@ function drawFrame(x, y, w, h){
   let frameColour = color(148, 149, 153); 
   let innerFrameColour = color(42, 42, 48); 
   let frameDetail = color(45, 46, 54);
-  let blue = color(95, 204, 237);
+  let blue = color(95, 204, 237); //for highlight around whole frame
   //colours for pink mode
   let pinkFrame = color(180, 149, 245); 
   let innerPinkFrame = color(140, 75, 201);
-  let gold = color(255, 204, 153);
-  let lightGold = color(255, 245, 235);
+  let gold = color(255, 204, 153); //highlight around whole frame
+  let lightGold = color(255, 245, 235); //for frame details
 
   if(pinkMode == true){
     fill(innerPinkFrame);
@@ -164,6 +164,7 @@ function drawFrame(x, y, w, h){
   strokeWeight(0.6);
   stroke(frameDetail);
   ellipse(x, y, w + 7, h + 7); //outside ridge of the frame
+
   
   strokeWeight(1.5);
   strokeCap(ROUND);
@@ -174,9 +175,10 @@ function drawFrame(x, y, w, h){
     stroke(frameDetail);
   }
   bezier(55, 75, x - 60, y - 30, 65, 120, 48, 120);
-  bezier(50, 121, x - 60, y + 13, 55, 120, 60, 139);
-  bezier(145, 75, x + 60, y - 35, 138, 120, 151, 118);
+  bezier(50, 121, x - 60, y + 13, 55, 120, 60, 139); //left side
+  bezier(145, 75, x + 60, y - 35, 138, 120, 151, 118); 
   bezier(150, 120, x + 60, y, 110, 190, 150, 139); //creates all the frame etchings
+  //right side
 
   if(pinkMode == true){
     stroke(gold);
@@ -192,7 +194,7 @@ function drawFrame(x, y, w, h){
 function drawButterfly(x, y, w, h){
   let butterflyColour = color(98, 54, 186);
   let outline = color(111, 172, 237);
-  let lightPurple = color(154, 87, 179);
+  let lightPurple = color(154, 87, 179); //butterfly markings
 
   fill(butterflyColour);
   stroke(outline);
@@ -251,8 +253,6 @@ function drawHeart(){
   fill(heartHighlights);
   ellipse(107, 88, 10, 7);
   ellipse(110, 95, 2, 2); //highlights on the heart
-
-
 
 }
 

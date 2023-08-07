@@ -7,47 +7,366 @@ Your final settings.txt will look something like this when you are finished:
 /////////////////////////////////
 
 Wallpaper 1:
-
 //your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+let pinkMode = false; //switches on and off to pink mode
+
+//petal variables
+let mPetalW  = 15; //middle petal width 
+let mPetalH = 15; //middle petal height 
+let centreX = 90; //x pos of centre petals 
+let centreY = 145; //y pos of centre petals 
+let petalWidth = 10; //inner petal width 
+let petalHeight = 15; //inner petal height 
+let leftX = 45; //x pos of left petals 
+let leftY = 140; //y pos of left petals
+let rightX = 135; //x pos of right petals 
+let rightY = 140; //y pos of right petals
+
+
+//frame variables
+let frameHeight = 150;
+let frameWidth = 100;
+
+//butterfly variables
+let butterflyX = 100;
+let butterflyY = 70;
+let wingWidth = 15;
+let wingHeight = 20;
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 100;
 }
+
 
 /////////////////////////////////
 
 Wallpaper 2:
-
 //your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
+let pinkMode = true; //switches on and off to pink mode
+
+//petal variables
+let mPetalW  = 10; //middle petal width
+let mPetalH = 10; //middle petal height
+let centreX = 100; //x pos of centre petals
+let centreY = 150; //y pos of centre petals
+let petalWidth = 10; //inner petal width
+let petalHeight = 15; //inner petal height
+let leftX = 55; //x pos of left petals
+let leftY = 140; //y pos of left petals
+let rightX = 140; //x pos of right petals
+let rightY = 140; //y pos of right petals
+
+
+//frame variables
+let frameHeight = 150;
+let frameWidth = 100;
+
+//butterfly variables
+let butterflyX = 100;
+let butterflyY = 70;
+let wingWidth = 15;
+let wingHeight = 20;
+
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 0;
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 100;
+}
+
+/////////////////////////////////
+Wallpaper 3:
+
+//your parameter variables go here!
+let pinkMode = false; //switches on and off to pink mode
+
+//petal variables
+let mPetalW  = 10; //middle petal width
+let mPetalH = 10; //middle petal height 
+let centreX = 100; //x pos of centre petals 
+let centreY = 150; //y pos of centre petals 
+let petalWidth = 10; //inner petal width 
+let petalHeight = 15; //inner petal height 
+let leftX = 55; //x pos of left petals 
+let leftY = 140; //y pos of left petals
+let rightX = 140; //x pos of right petals 
+let rightY = 140; //y pos of right petals
+
+
+//frame variables
+let frameHeight = 175; 
+let frameWidth = 125; 
+
+//butterfly variables
+let butterflyX = 100;
+let butterflyY = 70;
+let wingWidth = 15; 
+let wingHeight = 15; 
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 100;
+}
+
+/////////////////////////////////
+Wallpaper 4:
+
+//your parameter variables go here!
+let pinkMode = true; //switches on and off to pink mode
+
+//petal variables
+let mPetalW  = 15; //middle petal width 
+let mPetalH = 10; //middle petal height 
+let centreX = 100; //x pos of centre petals 
+let centreY = 150; //y pos of centre petals 
+let petalWidth = 15; //inner petal width 
+let petalHeight = 15; //inner petal height 
+let leftX = 55; //x pos of left petals 
+let leftY = 140; //y pos of left petals
+let rightX = 140; //x pos of right petals 
+let rightY = 140; //y pos of right petals
+
+
+//frame variables
+let frameHeight = 150; 
+let frameWidth = 100; 
+
+//butterfly variables
+let butterflyX = 100;
+let butterflyY = 70;
+let wingWidth = 15; 
+let wingHeight = 20; 
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 20;
+}
+
+/////////////////////////////////
+Wallpaper 5:
+
+//your parameter variables go here!
+let pinkMode = true; //switches on and off to pink mode
+
+//petal variables
+let mPetalW  = 10; //middle petal width 
+let mPetalH = 12; //middle petal height 
+let centreX = 101; //x pos of centre petals 
+let centreY = 150; //y pos of centre petals 
+let petalWidth = 10; //inner petal width 
+let petalHeight = 17; //inner petal height 
+let leftX = 55; //x pos of left petals 
+let leftY = 140; //y pos of left petals
+let rightX = 140; //x pos of right petals 
+let rightY = 140; //y pos of right petals
+
+
+//frame variables
+let frameHeight = 150; 
+let frameWidth = 75; 
+
+//butterfly variables
+let butterflyX = 100;
+let butterflyY = 70;
+let wingWidth = 15; 
+let wingHeight = 20; 
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 75;
+}
+
+/////////////////////////////////
+Wallpaper 6:
+
+//your parameter variables go here!
+let pinkMode = false; //switches on and off to pink mode
+
+//petal variables
+let mPetalW  = 20; //middle petal width 
+let mPetalH = 20; //middle petal height 
+let centreX = 100; //x pos of centre petals 
+let centreY = 150; //y pos of centre petals 
+let petalWidth = 10; //inner petal width 
+let petalHeight = 15; //inner petal height 
+let leftX = 60; //x pos of left petals 
+let leftY = 140; //y pos of left petals
+let rightX = 145; //x pos of right petals 
+let rightY = 140; //y pos of right petals
+
+
+//frame variables
+let frameHeight = 175; 
+let frameWidth = 100; 
+
+//butterfly variables
+let butterflyX = 100;
+let butterflyY = 70;
+let wingWidth = 15; 
+let wingHeight = 20; 
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 25;
+}
+
+/////////////////////////////////
+Wallpaper 7:
+//your parameter variables go here!
+let pinkMode = true; //switches on and off to pink mode
+
+//petal variables
+let mPetalW  = 10; //middle petal width 
+let mPetalH = 10; //middle petal height 
+let centreX = 100; //x pos of centre petals 
+let centreY = 150; //y pos of centre petals 
+let petalWidth = 15; //inner petal width 
+let petalHeight = 15; //inner petal height 
+let leftX = 50; //x pos of left petals
+let leftY = 145; //y pos of left petals
+let rightX = 140; //x pos of right petals 
+let rightY = 145; //y pos of right petals 
+
+
+//frame variables
+let frameHeight = 150; 
+let frameWidth = 110; 
+
+//butterfly variables
+let butterflyX = 100;
+let butterflyY = 70;
+let wingWidth = 15; 
+let wingHeight = 20; 
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 100;
+}
+
+
+/////////////////////////////////
+Wallpaper 8: 
+
+//your parameter variables go here!
+let pinkMode = false; //switches on and off to pink mode
+
+//petal variables
+let mPetalW  = 10; //middle petal width 
+let mPetalH = 10; //middle petal height 
+let centreX = 100; //x pos of centre petals //100
+let centreY = 150; //y pos of centre petals 
+let petalWidth = 10; //inner petal width //10
+let petalHeight = 15; //inner petal height 
+let leftX = 55; //x pos of left petals //55
+let leftY = 140; //y pos of left petals //140
+let rightX = 140; //x pos of right petals //140
+let rightY = 140; //y pos of right petals //140
+
+
+//frame variables
+let frameHeight = 150; 
+let frameWidth = 130; //100
+
+//butterfly variables
+let butterflyX = 100; //100
+let butterflyY = 70; //70
+let wingWidth = 15; //15
+let wingHeight = 30; //20
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 100;
+}
+
+/////////////////////////////////
+Wallpaper 9 (final):
+
+let pinkMode = false; //switches on and off to pink mode
+
+//petal variables
+let mPetalW  = 10; //middle petal width
+let mPetalH = 10; //middle petal height
+let centreX = 100; //x pos of centre petals
+let centreY = 150; //y pos of centre petals
+let petalWidth = 10; //inner petal width
+let petalHeight = 15; //inner petal height
+let leftX = 55; //x pos of left petals
+let leftY = 140; //y pos of left petals
+let rightX = 140; //x pos of right petals
+let rightY = 140; //y pos of right petals
+
+
+//frame variables
+let frameHeight = 150;
+let frameWidth = 100;
+
+//butterfly variables
+let butterflyX = 100;
+let butterflyY = 70;
+let wingWidth = 15;
+let wingHeight = 20;
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 100;
 }
