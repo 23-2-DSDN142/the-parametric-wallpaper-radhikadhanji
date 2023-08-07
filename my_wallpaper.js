@@ -33,7 +33,7 @@ function setup_wallpaper(pWallpaper) {
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
   pWallpaper.grid_settings.cell_height = 200;
-  pWallpaper.grid_settings.row_offset  = 75;
+  pWallpaper.grid_settings.row_offset  = 100;
 }
 
 function wallpaper_background() {
@@ -125,13 +125,14 @@ function drawMiddlePetals(x, y, w, h){
 
 function drawFrame(x, y, w, h){
   let frameColour = color(148, 149, 153); 
-  let innerFrameColour = color(71,71, 74);
+  let innerFrameColour = color(42, 42, 48); 
   let frameDetail = color(45, 46, 54);
-  let gold = color(168, 102, 47);
   let blue = color(95, 204, 237);
-
-  let pinkFrame = color(180, 149, 245);
+  //colours for pink mode
+  let pinkFrame = color(180, 149, 245); 
   let innerPinkFrame = color(140, 75, 201);
+  let gold = color(255, 204, 153);
+  let lightGold = color(255, 245, 235);
 
   if(pinkMode == true){
     fill(innerPinkFrame);
@@ -147,7 +148,7 @@ function drawFrame(x, y, w, h){
   strokeWeight(12);
   line(50, 90, 115, 25); 
   strokeWeight(2);
-  line(50, 80, 100, 20); //inner highlights
+  line(50, 80, 100, 20); //glass-like effect on the inside of the frame
 
   if(pinkMode == true){
     stroke(pinkFrame);
@@ -162,7 +163,20 @@ function drawFrame(x, y, w, h){
 
   strokeWeight(0.6);
   stroke(frameDetail);
-  ellipse(x, y, w + 7, h + 7); //details of the frame
+  ellipse(x, y, w + 7, h + 7); //outside ridge of the frame
+  
+  strokeWeight(1.5);
+  strokeCap(ROUND);
+  if(pinkMode == true){
+    stroke(lightGold);
+  }
+  else{
+    stroke(frameDetail);
+  }
+  bezier(55, 75, x - 60, y - 30, 65, 120, 48, 120);
+  bezier(50, 121, x - 60, y + 13, 55, 120, 60, 139);
+  bezier(145, 75, x + 60, y - 35, 138, 120, 151, 118);
+  bezier(150, 120, x + 60, y, 110, 190, 150, 139); //creates all the frame etchings
 
   if(pinkMode == true){
     stroke(gold);
@@ -170,10 +184,9 @@ function drawFrame(x, y, w, h){
   else{
     stroke(blue);
   }
-
   strokeWeight(1);
   noFill(40, 50, 140, 50);
-  ellipse(x, y, w + 10, h + 10); //highlight of the frame
+  ellipse(x, y, w + 10, h + 10); //highlight of the frame outside the edge
 }
 
 function drawButterfly(x, y, w, h){
@@ -184,39 +197,38 @@ function drawButterfly(x, y, w, h){
   fill(butterflyColour);
   stroke(outline);
   strokeWeight(1);
-  rect(x, y, w, h, 45, 1, 45, 1); //top right
-  rect(x - 15, y, w, h, 1, 45, 1, 45); //top left
-  rect(x, y + 20, w -3, h -3, 1, 30, 1, 30); //bottom right
-  rect(x - 12, y + 20, w - 3, h - 3, 30, 1, 30, 1); //bottom left
+  rect(x, y, w, h, 45, 1, 45, 1); //top right wing
+  rect(x - 15, y, w, h, 1, 45, 1, 45); //top left wing
+  rect(x, y + 20, w -3, h -3, 1, 30, 1, 30); //bottom right wing
+  rect(x - 12, y + 20, w - 3, h - 3, 30, 1, 30, 1); //bottom left wing
 
   ellipse(x + 12, y + 15, 8, 10);
   noStroke();
-  ellipse(x + 11, y + 15, 8, 10);
+  ellipse(x + 11, y + 15, 8, 10); //defines bottom curve in right wing
 
   stroke(outline);
   ellipse(x + 15, y + 10, 8, 10);
   noStroke();
-  ellipse(x + 14, y + 10, 8, 10);
+  ellipse(x + 14, y + 10, 8, 10); //defines top curve in right wing
   stroke(outline);
 
-  ellipse(x - 12, y + 15, 8, 10);
+  ellipse(x - 12, y + 15, 8, 10); 
   noStroke();
-  ellipse(x - 11, y + 15, 8, 10);
+  ellipse(x - 11, y + 15, 8, 10); //defines bottom curve in left wing
 
   stroke(outline);
   ellipse(x - 15, y + 10, 8, 10);
   noStroke();
-  ellipse(x - 14, y + 10, 8, 10); 
-
+  ellipse(x - 14, y + 10, 8, 10);  //defines top curve in left wing
 
   fill(lightPurple);
   ellipse(x + 5, y + 13, 9, 12);
   ellipse(x -5, y + 13, 9, 12);
   ellipse(x + 5, y + 25, 7, 9);
-  ellipse(x - 5, y + 25, 7, 9);
+  ellipse(x - 5, y + 25, 7, 9); //circular markings of the butterfly
 }
 
-function drawHeart(x, y){
+function drawHeart(){
   let heartColour = color(255, 176, 194);
   let heartOutline = color(255, 143, 169);
   let heartHighlights = color(255, 237, 248);
