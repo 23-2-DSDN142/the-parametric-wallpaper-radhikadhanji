@@ -4,14 +4,14 @@ let pinkMode = false; //switches on and off to pink mode
 //petal variables
 let mPetalW  = 10; //middle petal width 
 let mPetalH = 10; //middle petal height 
-let centreX = 100; //x pos of centre petals //100
+let centreX = 100; //x pos of centre petals 
 let centreY = 150; //y pos of centre petals 
-let petalWidth = 10; //inner petal width //10
+let petalWidth = 10; //inner petal width 
 let petalHeight = 15; //inner petal height 
-let leftX = 55; //x pos of left petals //55
-let leftY = 140; //y pos of left petals //140
-let rightX = 140; //x pos of right petals //140
-let rightY = 140; //y pos of right petals //140
+let leftX = 55; //x pos of left petals 
+let leftY = 140; //y pos of left petals 
+let rightX = 140; //x pos of right petals
+let rightY = 140; //y pos of right petals 
 
 
 //frame variables
